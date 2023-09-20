@@ -1,6 +1,15 @@
+:root {
+  --bg-primary: #1D2951;
+  --bg-secondary: #122;
+  --primary: white;
+  --secondary: cyan;
+}
+
 html {
-    background-color: #f1f5f9;
-    font-family: monospace;
+    background-color: var(--bg-secondary);
+    font-family: 'Victor Mono', monospace;
+    font-size: 0.8em;
+    color: var(--primary);
   }
   
   body {
@@ -16,14 +25,27 @@ html {
   }
   
   h1 {
+    color: #f1f5f9;
+    background-color: var(--bg-primary);
+    padding: 0.5rem 0;
     margin: 1rem 0;
     font-size: 2.5rem;
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
   }
 
   footer {
-    background-color: navy;
-    padding: 10px 20px;
+    background-color: var(--bg-primary);
+    padding: 20px 30px;
     color: white;
+  }
+
+  footer p {
+    margin-top: 0;
+    margin-bottom: 0.4rem;
   }
 
   /* nav styles */
@@ -38,7 +60,7 @@ html {
     width: 40px;
     height: 5px;
     margin-bottom: 10px;
-    background-color: #ff9776;
+    background-color: var(--bg-primary);
   }
 
 
@@ -46,7 +68,7 @@ html {
     width: 100%;
     top: 5rem;
     left: 48px;
-    background-color: #ff9776;
+    background-color: var(--bg-primary);
     display: none;
     margin: 0;
   }
@@ -62,7 +84,7 @@ html {
   }
 
   .nav-links a:hover, .nav-links a:focus {
-    background-color: #ff9776;
+    background-color: var(--bg-primary);
   }
 
   .expanded {
@@ -70,7 +92,7 @@ html {
   }
 
   code {
-    background-color: black;
+    background-color: #1F3F3F;
     color: lightblue;
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
@@ -89,9 +111,20 @@ html {
     content: '>>';
   }
 
+  a {
+    color: cyan;
+  }
+
+  b {
+    color: gold;
+  }
+
+  .blog-item {
+    list-style-type: '> ';
+  }
+
   @media screen and (min-width: 636px) {
     .nav-links {
-      margin-left: 5em;
       display: block;
       position: static;
       width: auto;
