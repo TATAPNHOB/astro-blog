@@ -1,0 +1,15 @@
+---
+import SocialMediaIcon from './SocialMediaIcon.astro';
+
+const platform = 'github';
+const platforms = ['github', 'instagram', 'facebook', 'twitter'];
+const username = 'tatapnhob';
+---
+<footer>
+    <p>Learn more about my projects:</p>
+    <div class='social-container'>
+        {platforms.map((p) => (
+            <SocialMediaIcon platform={p} username={username} />
+        ))}
+    </div>  
+</footer>
