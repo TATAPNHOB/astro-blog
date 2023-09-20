@@ -31,6 +31,7 @@ html {
     margin:  0 0 1rem 0;
     font-size: 2.5rem;
     text-align: center;
+    font-weight: 700;
   }
 
   h2 {
@@ -51,6 +52,7 @@ html {
   /* nav styles */
 
   .hamburger {
+    margin: 10px 0;
     padding-right: 20px;
     cursor: pointer;
   }
@@ -59,8 +61,8 @@ html {
     display: block;
     width: 40px;
     height: 5px;
-    margin-bottom: 10px;
-    background-color: var(--bg-primary);
+    margin-bottom: 8px;
+    background-color: var(--secondary);
   }
 
 
@@ -121,6 +123,14 @@ html {
 
   .blog-item {
     list-style-type: '> ';
+  }
+
+  .markdown-desc p {
+    line-height: 0.5;
+  }
+
+  .social-container a {
+    margin-right: 0.5rem;
   }
 
   @media screen and (min-width: 636px) {

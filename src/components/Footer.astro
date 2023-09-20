@@ -1,15 +1,38 @@
 ---
 import SocialMediaIcon from './SocialMediaIcon.astro';
 
-const platform = 'github';
 const platforms = ['github', 'instagram', 'facebook', 'twitter'];
+
+const services = [
+    {
+        "name": "GitHub",
+        "boxicon": "github",
+        "href": "https://github.com/tatapnhob"
+    },
+    {
+        "name": "Twitter",
+        "boxicon": "twitter",
+        "href": "https://twitter.com/dantatarinov"
+    },
+    {
+        "name": "LinkedIn",
+        "boxicon": "linkedin",
+        "href": "https://linkedin.com/in/tatapnhob"
+    },
+    {
+        "name": "Instagram",
+        "boxicon": "instagram",
+        "href": "https://instagram.com/ttphbdesign"
+    },
+]
+
 const username = 'tatapnhob';
 ---
 <footer>
     <p>Learn more about my projects:</p>
     <div class='social-container'>
-        {platforms.map((p) => (
-            <SocialMediaIcon platform={p} username={username} />
+        {services.map((service) => (
+            <SocialMediaIcon icon={service.boxicon} url={service.href} name={service.name}/>
         ))}
     </div>  
 </footer>

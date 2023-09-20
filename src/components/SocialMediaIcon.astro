@@ -1,7 +1,7 @@
 ---
-const { platform, username } = Astro.props;
+const { icon, url, name } = Astro.props;
 ---
 
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
-<a href={`https://${platform}.com/${username}`}><box-icon type='logo' name={platform} color="white"></box-icon></a>
+<a href={url}><box-icon type='logo' name={icon} color="white" title={name}></box-icon></a>
