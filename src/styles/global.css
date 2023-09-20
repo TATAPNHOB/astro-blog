@@ -211,6 +211,30 @@ html {
     margin: 0 auto 2rem auto;
   }
 
+  #evo-wip .st0 {
+    fill: var(--bg-primary);
+    filter: drop-shadow(0 0 1px orangered);
+  }
+
+  .left-cog {
+    transform-origin: 112px 102px;
+    animation: cog-rotation 5s linear infinite;
+  }
+
+  .right-cog {
+    transform-origin: 239px 118px;
+    animation: cog-rotation 5s linear infinite reverse;
+  }
+
+  @keyframes cog-rotation {
+    0% {
+      rotate: 0deg;
+    }
+    100% {
+      rotate: 360deg;
+    }
+  }
+
   @media screen and (min-width: 636px) {
     .nav-links {
       display: block;
