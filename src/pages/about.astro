@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = 'About Me';
 
@@ -13,55 +14,27 @@ const skills = ["HTML", 'CSS', 'JavaScript', "Astro", "Illustrator", "Photoshop"
 const happy = true;
 const finished = false;
 const goal = 3;
-
-const skillColor = 'navy';
-const fontWeight = 'bold';
-const textTransform = 'uppercase';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-        <style define:vars={{skillColor, fontWeight, textTransform}}>
-            h1 {
-                color: purple;
-                font-size: 4rem;
-            }
-            .skill {
-                color: var(--skillColor);
-                font-weight: var(--fontWeight);
-                text-transform: var(--textTransform);
-            }
-        </style>
-	</head>
-	<body>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/blog">Blog</a>
-		<h1>{pageTitle}</h1>
-        <h2>...and my Astro website!</h2>
-        <p>I am working my way through Astro tutorial, and this is a second page, second only to the index one.</p>
-        <p>We'll see how it goes.</p>
+<BaseLayout pageTitle={pageTitle}>
+    <h2>...and my Astro website!</h2>
+    <p>I am working my way through Astro tutorial, and this is a second page, second only to the index one.</p>
+    <p>We'll see how it goes.</p>
 
-        <p>Here are a few facts about me:</p>
-        <ul>
-            <li>My name is {identity.firstName}.</li>
-            <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-            {identity.hobbies.length >= 2 &&
-                <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}.</li>
-            }
-        </ul>
-        <p>My skills are:</p>
-        <ul>
-            {skills.map((skill) => <li class="skill">{skill}</li>)}
-        </ul>
+    <p>Here are a few facts about me:</p>
+    <ul>
+        <li>My name is {identity.firstName}.</li>
+        <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+        {identity.hobbies.length >= 2 &&
+            <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}.</li>
+        }
+    </ul>
+    <p>My skills are:</p>
+    <ul>
+        {skills.map((skill) => <li class="skill">{skill}</li>)}
+    </ul>
 
-        {happy && <p>I am happy to be learning Astro!</p>}
-        {finished && <p>I've finished this tutorial!</p>}
-        {goal === 3 ? <p>My goal is to finish it in 3 days.</p> : <p>My goal is not 3 days.</p>}
-	</body>
-</html>
+    {happy && <p>I am happy to be learning Astro!</p>}
+    {finished && <p>I've finished this tutorial!</p>}
+    {goal === 3 ? <p>My goal is to finish it in 3 days.</p> : <p>My goal is not 3 days.</p>}
+</BaseLayout>
