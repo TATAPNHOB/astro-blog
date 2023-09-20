@@ -1,5 +1,5 @@
 ---
-const { url, title } = Astro.props;
+const { url, title, date } = Astro.props;
 ---
 
-<li class="blog-item"><a href={url}>{title}</a></li>
+<li class="blog-item"><a href={url}>{`${title} --- ${date.slice(0, 10)}`}</a></li>

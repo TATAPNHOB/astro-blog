@@ -3,16 +3,19 @@ import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-    <div class="markdown-desc">
-        <ul class="tags">
-            {frontmatter.tags.map((tag) => (
-                <li><a href={`/tags/${tag}`}>{tag}</a></li>
-            ))}
-        </ul>
-        <p><em>{frontmatter.description}</em></p>
-        <p>Written by: <b>{frontmatter.author}</b></p>
-        <p>Published on: {frontmatter.pubDate.slice(0,10)}</p>
-    </div>
-    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt}>
+    <section class="title-section">
+        <div class="markdown-desc">
+            <ul class="tags">
+                {frontmatter.tags.map((tag) => (
+                    <li><a href={`/tags/${tag}`}>{tag}</a></li>
+                ))}
+            </ul>
+            <p>Written by: <span class="author">{!frontmatter.author.url ? frontmatter.author.name : <a href={frontmatter.author.url}>{frontmatter.author.name}</a>}</span></p>
+            <p>Published on: {frontmatter.pubDate.slice(0,10)}</p>
+            <p><em>{frontmatter.description}</em></p>
+        </div> 
+        <img class='blog-image' src={frontmatter.image.url} alt={frontmatter.image.alt}>    
+    </section>
+    <div class="divider"></div>
     <slot />
 </BaseLayout>

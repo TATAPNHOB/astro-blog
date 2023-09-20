@@ -1,15 +1,14 @@
 ---
 import BlogItem from '../components/BlogItem.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = 'My Astro Learning Blog';
+const pageTitle = 'My Blog';
 const allPosts = await Astro.glob('../pages/posts/*.md');
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<p>This is where I will post updates on my Astro learnings.</p>
         <ul>
             {allPosts.map((post) => (
-				<BlogItem url={post.url} title={post.frontmatter.title} />
+				<BlogItem url={post.url} title={post.frontmatter.title} date={post.frontmatter.pubDate}/>
 			))}
         </ul>
 </BaseLayout>

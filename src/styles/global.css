@@ -7,8 +7,7 @@
 
 html {
     background-color: var(--bg-secondary);
-    font-family: 'Victor Mono', monospace;
-    font-size: 0.8em;
+    font-family: 'Noto Sans Mono', monospace;
     color: var(--primary);
   }
   
@@ -29,13 +28,14 @@ html {
     background-color: var(--bg-primary);
     padding: 0.5rem 0;
     margin:  0 0 1rem 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
     font-weight: 700;
   }
 
   h2 {
     text-align: center;
+    color: var(--secondary);
   }
 
   footer {
@@ -83,6 +83,7 @@ html {
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
+    transition: background-color .2s, color .2s;
   }
 
   .nav-links a:hover, .nav-links a:focus {
@@ -105,15 +106,6 @@ html {
     padding-left: 0;
   }
 
-  .tags li {
-    display: inline-block;
-    margin-right: 0.5rem;
-  }
-
-  .tags li::before {
-    content: '>>';
-  }
-
   a {
     color: var(--secondary);
   }
@@ -122,16 +114,101 @@ html {
     color: gold;
   }
 
-  .blog-item {
+  .tags li, .author, .index-blog-snippet li {
+    display: inline-block;
+    margin-right: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    background-color: var(--bg-primary);
+    color: black;
+    box-shadow: 3px 3px 0 orangered;
+    margin-bottom: 0.5rem;
+  }
+
+  .tags li a, .index-blog-snippet li a {
+    color: black;
+  }
+
+  .tags li::before {
+    content: '>>';
+  }
+
+  ul {
     list-style-type: '> ';
   }
 
-  .markdown-desc p {
+  /* .markdown-desc p {
     line-height: 0.5;
+  } */
+
+  .markdown-desc {
+    width: 50%;
+  }
+
+  .title-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
   }
 
   .social-container a {
     margin-right: 0.5rem;
+  }
+
+  .divider {
+    border-bottom: 2px solid var(--bg-primary);
+    width: 10rem;
+    height: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .blog-image {
+    width: 50%;
+    object-fit: contain;
+  }
+
+  .author a {
+    color: black;
+  }
+
+  .index-blog-snippet {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+  .index-blog-snippet li {
+    width: fit-content;
+  }
+
+  
+  .evo-arrow {
+    fill: none;
+    stroke: var(--bg-primary);
+    stroke-width: 7;
+    stroke-miterlimit: 10; 
+  }
+
+  .arrow-container {
+    height: 60px;
+    aspect-ratio: 2;
+    float: right;
+  }
+
+  #evo-arrows {
+    transition: .2s ease;
+  }
+
+  .arrow-container:hover #evo-arrows {
+    transform: translateX(30px);
+  }
+
+  #evo-wip {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 2rem auto;
   }
 
   @media screen and (min-width: 636px) {

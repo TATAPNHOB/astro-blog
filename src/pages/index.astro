@@ -1,8 +1,15 @@
 ---
+import BlogItem from '../components/BlogItem.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = 'Home Page';
+const pageTitle = 'TTPHB>>EVO';
+
+const allPosts = await Astro.glob('../pages/posts/*.md');
+let latestPost = allPosts[0];
+allPosts.filter(function(a, b, c) { if (a.frontmatter.pubDate > latestPost.frontmatter.pubDate) latestPost = a; });
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <h2>My awesome blog subtitle</h2>
+    <h2>Read the latest blog post!</h2>
+    <ul class="index-blog-snippet"><BlogItem url={latestPost.url} title={latestPost.frontmatter.title} date={latestPost.frontmatter.pubDate}/></ul>
+    <img src="/evo-wip.svg" id="evo-wip" alt="Work in progress sign."/>
 </BaseLayout>

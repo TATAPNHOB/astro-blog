@@ -19,17 +19,22 @@ const services = [
         "boxicon": "linkedin",
         "href": "https://linkedin.com/in/tatapnhob"
     },
+    // {
+    //     "name": "Instagram",
+    //     "boxicon": "instagram",
+    //     "href": "https://instagram.com/ttphbdesign"
+    // },
     {
-        "name": "Instagram",
-        "boxicon": "instagram",
-        "href": "https://instagram.com/ttphbdesign"
+        "name": "Telegram",
+        "boxicon": "telegram",
+        "href": "https://t.me/dantatarinov"
     },
 ]
 
 const username = 'tatapnhob';
 ---
 <footer>
-    <p>Learn more about my projects:</p>
+    <p>&#169; TTPHB MMXXIII. Most rights reserved.</p>
     <div class='social-container'>
         {services.map((service) => (
             <SocialMediaIcon icon={service.boxicon} url={service.href} name={service.name}/>

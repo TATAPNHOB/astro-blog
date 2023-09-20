@@ -7,34 +7,31 @@ const pageTitle = 'About Me';
 const identity = {
     firstName: "Daniel",
     country: "null",
-    occupation: "Web Designer",
+    occupation: "Game Designer",
     hobbies: ["game design", "intellectual games", "trivia"]
 };
-const skills = ["HTML", 'CSS', 'JavaScript', "Astro", "Illustrator", "Photoshop"];
-const happy = true;
-const finished = false;
-const goal = 3;
+
+const stack = ["HTML/CSS/JS", "Astro", "Netlify", "Obsidian for .md generation (soon)"];
+
+const birthday = new Date('2023-12-06');
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <h2>...and my Astro website!</h2>
-    <p>I am working my way through Astro tutorial, and this is a second page, second only to the index one.</p>
-    <p>We'll see how it goes.</p>
+    <h2>...and about the things I do.</h2>
+    <p>I'm Daniel. I'm 20 years old. I wanna do more creative stuff with my software engineering knowledge and this *broad gesture on all of the World Wide Web* might just be my thing. I am also studying to be a game designer and also do graphic designer jobs for a bit of a living.</p>
+
+    {birthday.getDay() === new Date().getDay() && birthday.getMonth() === new Date().getMonth() && <p>Hey, today is my birthday!</p>}
 
     <p>Here are a few facts about me:</p>
     <ul>
-        <li>My name is {identity.firstName}.</li>
-        <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-        {identity.hobbies.length >= 2 &&
-            <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}.</li>
-        }
+        <li>My name is {identity.firstName}. Yep, nothing changed.</li>
+        <li>Currently, I live in {identity.country} and I study to be a {identity.occupation}.</li>
+        <li>I like trivia, puzzles, detectives, whodunnits, howcatchems, and intellectual games. Bring it on!</li>
+        <li>I like Uni the cat. He's an alright fellow.</li>
+        <li>Pizza is also good.</li>
     </ul>
-    <p>My skills are:</p>
+    <p>This website is built on this stack:</p>
     <ul>
-        {skills.map((skill) => <li class="skill">{skill}</li>)}
+        {stack.map((piece) => <li class="stack-item">{piece}</li>)}
     </ul>
-
-    {happy && <p>I am happy to be learning Astro!</p>}
-    {finished && <p>I've finished this tutorial!</p>}
-    {goal === 3 ? <p>My goal is to finish it in 3 days.</p> : <p>My goal is not 3 days.</p>}
 </BaseLayout>
