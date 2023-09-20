@@ -161,6 +161,10 @@ html {
     margin-bottom: 2rem;
   }
 
+  .centered-divider {
+    margin: 0 auto 2rem auto;
+  }
+
   .blog-image {
     width: 100%;
     object-fit: contain;

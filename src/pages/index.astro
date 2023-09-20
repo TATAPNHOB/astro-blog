@@ -9,6 +9,8 @@ allPosts.filter(function(a, b, c) { if (a.frontmatter.pubDate > latestPost.front
 ---
 
 <BaseLayout pageTitle={pageTitle}>
+    <h2>An evolutional journey to the web.</h2>
+    <div class="divider centered-divider"></div>
     <h2>Read the latest blog post!</h2>
     <ul class="index-blog-snippet"><BlogItem url={latestPost.url} title={latestPost.frontmatter.title} date={latestPost.frontmatter.pubDate}/></ul>
     <svg version="1.1" id="evo-wip" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
