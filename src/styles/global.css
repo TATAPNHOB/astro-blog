@@ -1,8 +1,8 @@
 :root {
-  --bg-primary: #1D2951;
+  --bg-primary: #EEBC1D;
   --bg-secondary: #122;
   --primary: white;
-  --secondary: cyan;
+  --secondary: gold;
 }
 
 html {
@@ -25,7 +25,7 @@ html {
   }
   
   h1 {
-    color: #f1f5f9;
+    color: black;
     background-color: var(--bg-primary);
     padding: 0.5rem 0;
     margin:  0 0 1rem 0;
@@ -41,7 +41,7 @@ html {
   footer {
     background-color: var(--bg-primary);
     padding: 20px 30px;
-    color: white;
+    color: black;
   }
 
   footer p {
@@ -87,6 +87,7 @@ html {
 
   .nav-links a:hover, .nav-links a:focus {
     background-color: var(--bg-primary);
+    color: black;
   }
 
   .expanded {
@@ -114,7 +115,7 @@ html {
   }
 
   a {
-    color: cyan;
+    color: var(--secondary);
   }
 
   b {
