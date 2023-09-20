@@ -23,8 +23,7 @@ Hey. So, I have this bad habit, right? I never complete stuff. I cannot physical
 - Portfolio section
 - Recommendation section
 - Cool animations and transitions
-- Newsletter, maybe?
-- 100 days of indie web?? Who am I, a web designer????
+- Newsletter, maybe? idk
 
 ## What's even nexter?
 
