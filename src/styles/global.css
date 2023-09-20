@@ -213,8 +213,10 @@ html {
 
   #evo-wip .st0 {
     fill: var(--bg-primary);
-    filter: drop-shadow(0 0 1px orangered);
+    /* filter: drop-shadow(0 0 1px orangered); */
   }
+  #evo-wip .st1{fill:none;stroke:#EDBC1D;stroke-width:7;stroke-miterlimit:10;}
+	#evo-wip .st2{fill:none;stroke:#EDBC1D;stroke-width:9;stroke-miterlimit:10;}
 
   .left-cog {
     transform-origin: 112px 102px;
