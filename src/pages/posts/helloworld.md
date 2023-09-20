@@ -8,7 +8,7 @@ author:
     url: '../about/'
 image:
     url: '/helloworld.png'
-    alt: 'The full Astro logo.'
+    alt: 'Amazed TTPHB>>EVO appreciator.'
 tags: ['updates', 'meta']
 ---
 

@@ -141,12 +141,12 @@ html {
   } */
 
   .markdown-desc {
-    width: 50%;
+    width: 100%;
   }
 
   .title-section {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse;
     gap: 1rem;
   }
 
@@ -162,7 +162,7 @@ html {
   }
 
   .blog-image {
-    width: 50%;
+    width: 100%;
     object-fit: contain;
   }
 
@@ -180,6 +180,7 @@ html {
 
   .index-blog-snippet li {
     width: fit-content;
+    text-align: center;
   }
 
   
@@ -194,6 +195,7 @@ html {
     height: 60px;
     aspect-ratio: 2;
     float: right;
+    display: none;
   }
 
   #evo-arrows {
@@ -251,6 +253,23 @@ html {
 
     .hamburger {
       display: none;
+    }
+
+    .arrow-container {
+      display: block;
+    }
+
+    .title-section {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .markdown-desc {
+      width: 50%;
+    }
+
+    .blog-image {
+      width: 50%;
     }
 
   }
