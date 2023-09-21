@@ -2,6 +2,8 @@
 import Hamburger from "./Hamburger.astro";
 import Navigation from "./Navigation.astro";
 
+const { name } = Astro.props;
+
 ---
 
 <header>
@@ -15,5 +17,5 @@ import Navigation from "./Navigation.astro";
             <polyline class="evo-arrow" points="7.3,62.6 39.9,30 7.3,-2.6 "/>
         </svg>
     </div>
-    <nav><Hamburger /><Navigation /></nav>
+    <nav><Hamburger /><Navigation name={name} /></nav>
 </header>

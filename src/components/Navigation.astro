@@ -1,7 +1,27 @@
 ---
+const { name } = Astro.props;
+
+// const pages = await Astro.glob('../pages/*.astro');
+
+const nav = [
+    {
+        "name": "HOME",
+        "url": "/"
+    },
+    {
+        "name": "ABOUT",
+        "url": "/about"
+    },
+    {
+        "name": "BLOG",
+        "url": "/blog"
+    },
+]
+
 ---
+
 <div class="nav-links">
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    {nav.map((page) => (
+        <a href={page.url} class={name.toLowerCase() == page.name.toLowerCase() ? "highlighted" : ""}>{page.name}</a>
+    ))}
 </div>

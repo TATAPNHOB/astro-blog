@@ -44,14 +44,14 @@ html {
     color: black;
     position: relative;
     overflow: hidden;
-    z-index: -2;
+    z-index: 0;
   }
 
   footer p {
     position: inherit;
     margin-top: 0;
     margin-bottom: 0.4rem;
-    z-index: 1;
+    z-index: 2;
   }
 
   /* nav styles */
@@ -92,6 +92,11 @@ html {
   }
 
   .nav-links a:hover, .nav-links a:focus {
+    background-color: var(--bg-primary);
+    color: black;
+  }
+
+  .nav-links .highlighted {
     background-color: var(--bg-primary);
     color: black;
   }
@@ -154,7 +159,7 @@ html {
     flex-direction: column-reverse;
     gap: 1rem;
   }
-
+  
   .social-container a {
     margin-right: 0.5rem;
   }
@@ -195,8 +200,7 @@ html {
   header {
     height: fit-content;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    flex-direction: row;
   }  
 
   .evo-arrow {
@@ -240,7 +244,7 @@ html {
     position: absolute;
     top: -20px;
     right: -10px;
-    z-index: -1;
+    z-index: 1;
   }
 
   #evo-wip .st0 {

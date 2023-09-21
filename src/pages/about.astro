@@ -3,6 +3,7 @@ import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = 'About Me';
+const pageName = 'about';
 
 const identity = {
     firstName: "Daniel",
@@ -16,7 +17,7 @@ const stack = ["HTML/CSS/JS", "Astro", "Netlify", "Obsidian for .md generation (
 const birthday = new Date('2023-12-06');
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} pageName={pageName}>
     <h2>...and about the things I do.</h2>
     <p>I'm Daniel. I'm 20 years old. I wanna do more creative stuff with my software engineering knowledge and this *broad gesture on all of the World Wide Web* might just be my thing. I am also studying to be a game designer and also do graphic designer jobs for a bit of a living.</p>
 

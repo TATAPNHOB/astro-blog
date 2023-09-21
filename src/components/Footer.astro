@@ -34,12 +34,6 @@ const services = [
 const username = 'tatapnhob';
 ---
 <footer>
-    <p>&#169; TTPHB MMXXIII. Most rights reserved.</p>
-    <div class='social-container'>
-        {services.map((service) => (
-            <SocialMediaIcon icon={service.boxicon} url={service.href} name={service.name}/>
-        ))}
-    </div>
     <svg version="1.1" id="evo-wip" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 330 205" style="enable-background:new 0 0 330 205;" xml:space="preserve">
         <g>
@@ -63,4 +57,10 @@ const username = 'tatapnhob';
             <polyline class="st2" points="75.9,139.9 113.2,102.6 76,65.2 		"/>
         </g>
     </svg>  
+    <p>&#169; TTPHB MMXXIII. Most rights reserved.</p>
+    <div class='social-container'>
+        {services.map((service) => (
+            <SocialMediaIcon icon={service.boxicon} url={service.href} name={service.name}/>
+        ))}
+    </div>
 </footer>
