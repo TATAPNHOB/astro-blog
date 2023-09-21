@@ -187,7 +187,12 @@ html {
     text-align: center;
   }
 
-  
+  header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }  
+
   .evo-arrow {
     fill: none;
     stroke: var(--bg-primary);
@@ -197,17 +202,29 @@ html {
 
   .arrow-container {
     height: 60px;
+    width: 120px;
     aspect-ratio: 2;
-    float: right;
     display: none;
+    overflow: hidden;
   }
 
   #evo-arrows {
-    transition: .2s ease;
+    height: 60px;
+    position: relative;
+    left: -45px;
   }
 
   .arrow-container:hover #evo-arrows {
-    transform: translateX(30px);
+    animation: arrow-slide-right .2s linear infinite;
+  }
+
+  @keyframes arrow-slide-right {
+    0% {
+      left: -45px;
+    }
+    100% {
+      left: -15px;
+    }
   }
 
   #evo-wip {
