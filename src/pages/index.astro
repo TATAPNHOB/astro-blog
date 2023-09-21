@@ -1,4 +1,5 @@
 ---
+import BlogBlock from '../components/BlogBlock.astro';
 import BlogItem from '../components/BlogItem.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = 'TTPHB>>EVO';
@@ -11,7 +12,5 @@ allPosts.filter(function(a, b, c) { if (a.frontmatter.pubDate > latestPost.front
 
 <BaseLayout pageTitle={pageTitle} pageName={pageName}>
     <h2>An evolutional journey to the web.</h2>
-    <div class="divider centered-divider"></div>
-    <h2>Read the latest blog post!</h2>
-    <ul class="index-blog-snippet"><BlogItem url={latestPost.url} title={latestPost.frontmatter.title} date={latestPost.frontmatter.pubDate}/></ul>
+    <BlogBlock postUrl={latestPost.url} postTitle={latestPost.frontmatter.title} postDate={latestPost.frontmatter.pubDate} />    
 </BaseLayout>
