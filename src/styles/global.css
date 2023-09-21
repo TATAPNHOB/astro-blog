@@ -152,7 +152,12 @@ html {
 
   main {
     /* abomination */
-    min-height: calc(100vh - 60px - 2rem - 0.4rem - 1.5rem - 30px - 40px);
+    min-height: calc(100vh - 60px - 2rem - 0.4rem - 1.5rem - 30px - 40px - 5.3rem);
+    padding: 0 1.25rem;
+  }
+
+  article img {
+    width: 100%;
   }
 
   ul {

@@ -25,6 +25,8 @@ I did some small changes to my liking.
 
 Also, I tried to connect Telegram's Instant View to my articles, but I guess it doesn't even work as intended anymore. No Instant View for me.
 
+![bro is onto nothing](/tiv.png)
+
 In other news, in some ungodly coincidence, the [ttphb.com](https://ttphb.com) website is going to be saved from our Chinese overlords on the 25th of September. Would be cool to snatch it, although it probably is on some kind of autopayment schedule. Yeah, I'm not too optimistic about it.
 
 I won't submerge in Obisidan syncing just yet, I think. Still having fun with the native generation, and having no need to automatize the proccess. So, it will stay that way for now. I also thought that maybe I would like to write a Telegram bot that would fetch posts from my channel. I'll think about it some more. For now, I'm tidying up and adding other features.
