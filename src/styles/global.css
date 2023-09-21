@@ -202,7 +202,7 @@ html {
   }
 
   .arrow-container {
-    height: 100%;
+    height: inherit;
     width: 120px;
     aspect-ratio: 2;
     display: none;
@@ -267,10 +267,12 @@ html {
       position: static;
       width: auto;
       background: none;
+      height: 100%;
     }
     .nav-links a {
       display: inline-block;
       padding: 15px 20px;
+      height: 100%;
     }
 
     .hamburger {
