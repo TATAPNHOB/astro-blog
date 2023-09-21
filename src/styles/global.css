@@ -42,11 +42,16 @@ html {
     background-color: var(--bg-primary);
     padding: 20px 30px;
     color: black;
+    position: relative;
+    overflow: hidden;
+    z-index: -2;
   }
 
   footer p {
+    position: inherit;
     margin-top: 0;
     margin-bottom: 0.4rem;
+    z-index: 1;
   }
 
   /* nav styles */
@@ -230,17 +235,20 @@ html {
 
   #evo-wip {
     display: block;
-    width: 100%;
-    max-width: 500px;
+    width: 300px;
     margin: 0 auto 2rem auto;
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    z-index: -1;
   }
 
   #evo-wip .st0 {
-    fill: var(--bg-primary);
+    fill: orangered;
     /* filter: drop-shadow(0 0 1px orangered); */
   }
-  #evo-wip .st1{fill:none;stroke:#EDBC1D;stroke-width:7;stroke-miterlimit:10;}
-	#evo-wip .st2{fill:none;stroke:#EDBC1D;stroke-width:9;stroke-miterlimit:10;}
+  #evo-wip .st1{fill:none;stroke: orangered;stroke-width:7;stroke-miterlimit:10;}
+	#evo-wip .st2{fill:none;stroke: orangered;stroke-width:9;stroke-miterlimit:10;}
 
   .left-cog {
     transform-origin: 112px 102px;
