@@ -52,7 +52,7 @@ html {
   }
 
   .footer-space {
-    height: calc(30px * 2 + 2rem + 1rem + 0.4rem + 30px);
+    height: calc(30px * 2 + 2rem + 1rem + 0.4rem + 18px);
   }
 
   footer p {
