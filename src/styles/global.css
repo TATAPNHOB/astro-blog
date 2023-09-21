@@ -188,6 +188,7 @@ html {
   }
 
   header {
+    height: fit-content;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -201,7 +202,7 @@ html {
   }
 
   .arrow-container {
-    height: 60px;
+    height: 100%;
     width: 120px;
     aspect-ratio: 2;
     display: none;
@@ -209,7 +210,7 @@ html {
   }
 
   #evo-arrows {
-    height: 60px;
+    height: 100%;
     position: relative;
     left: -45px;
   }
