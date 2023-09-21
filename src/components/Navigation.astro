@@ -22,6 +22,6 @@ const nav = [
 
 <div class="nav-links">
     {nav.map((page) => (
-        <a href={page.url} class={name.toLowerCase() == page.name.toLowerCase() ? "highlighted" : ""}>{page.name}</a>
+        <a href={page.url} class={name != undefined && name.toLowerCase() == page.name.toLowerCase() ? "highlighted" : ""}>{page.name}</a>
     ))}
 </div>
