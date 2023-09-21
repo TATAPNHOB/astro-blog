@@ -17,5 +17,7 @@ const { frontmatter } = Astro.props;
         <img class='blog-image' src={frontmatter.image.url} alt={frontmatter.image.alt}>    
     </section>
     <div class="divider"></div>
-    <slot />
+    <article>
+        <slot />
+    </article>
 </BaseLayout>
