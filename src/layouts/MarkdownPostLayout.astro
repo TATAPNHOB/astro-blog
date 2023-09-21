@@ -2,7 +2,7 @@
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
-<BaseLayout pageTitle={frontmatter.title}>
+<BaseLayout pageTitle={frontmatter.title} pageName="blogpost">
     <section class="title-section">
         <div class="markdown-desc">
             <ul class="tags">
