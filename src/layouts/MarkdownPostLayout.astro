@@ -10,7 +10,7 @@ const { frontmatter } = Astro.props;
                     <li><a href={`/tags/${tag}`}>{tag}</a></li>
                 ))}
             </ul>
-            <p>Written by: <span class="author">{!frontmatter.author.url ? frontmatter.author.name : <a href={frontmatter.author.url}>{frontmatter.author.name}</a>}</span></p>
+            <p>Written by: <span class="author">{!frontmatter.author.url ? frontmatter.author.name : <a href={`/${frontmatter.author.url}`}>{frontmatter.author.name}</a>}</span></p>
             <p>Published on: {frontmatter.pubDate.slice(0,10)}</p>
             <p><em>{frontmatter.description}</em></p>
         </div> 
