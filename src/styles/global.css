@@ -54,6 +54,11 @@ html {
     z-index: 2;
   }
 
+  .social-container {
+    position: relative;
+    z-index: 2;
+  }
+
   /* nav styles */
 
   .hamburger {
@@ -70,6 +75,9 @@ html {
     background-color: var(--secondary);
   }
 
+  nav {
+    width: 100%;
+  }
 
   .nav-links {
     width: 100%;
