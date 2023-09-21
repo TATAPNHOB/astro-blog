@@ -212,8 +212,8 @@ html {
 
   .arrow-container {
     height: inherit;
-    width: 120px;
-    aspect-ratio: 2;
+    width: 60px;
+    aspect-ratio: 1;
     display: none;
     overflow: hidden;
   }
@@ -221,7 +221,7 @@ html {
   #evo-arrows {
     height: 100%;
     position: relative;
-    left: -45px;
+    left: -105px;
   }
 
   .arrow-container:hover #evo-arrows {
@@ -230,10 +230,10 @@ html {
 
   @keyframes arrow-slide-right {
     0% {
-      left: -45px;
+      left: -105px;
     }
     100% {
-      left: -15px;
+      left: -75px;
     }
   }
 
