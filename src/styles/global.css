@@ -296,7 +296,7 @@ html {
   .blog-block-container {
     background-color: #EEBC1D;
     padding: 1.5rem 2rem;
-    width: 450px;
+    max-width: 450px;
     border-radius: 1rem;
     margin: 0 auto;
   }
