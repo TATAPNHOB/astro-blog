@@ -22,7 +22,7 @@ html {
 
   .background {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     top: 0; left: 0;
     position: fixed;
     background-image: radial-gradient(
@@ -85,8 +85,11 @@ html {
 
   .hamburger {
     margin: 10px 0;
-    padding-right: 20px;
+    margin-left: 1.125rem;
+    display: block;
+    position: relative;
     cursor: pointer;
+    z-index: 10;
   }
 
   .hamburger .line {
@@ -105,9 +108,11 @@ html {
     width: 100%;
     top: 5rem;
     left: 48px;
-    background-color: var(--bg-primary);
-    display: none;
+    display: flex;
+    flex-direction: column;
     margin: 0;
+    height: 0;
+    overflow: hidden;
   }
 
   .nav-links a {
@@ -132,7 +137,17 @@ html {
   }
 
   .expanded {
-    display: unset;
+    height: fit-content;
+    animation: expand-links .2s ease-out;
+  }
+
+  @keyframes expand-links {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
 
   code {
