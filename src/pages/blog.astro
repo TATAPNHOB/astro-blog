@@ -4,11 +4,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = 'My Blog';
 const pageName = 'blog';
 const allPosts = await Astro.glob('../pages/posts/*.md');
+const sortedPosts = allPosts.sort((a, b) => ( 
+        b.frontmatter.pubDate.localeCompare(a.frontmatter.pubDate)
+ ));
+
+console.log(typeof allPosts[0].frontmatter.pubDate);
+
 ---
 
 <BaseLayout pageTitle={pageTitle} pageName={pageName}>
         <ul>
-            {allPosts.map((post) => (
+            {sortedPosts.map((post) => (
 				<BlogItem url={post.url} title={post.frontmatter.title} date={post.frontmatter.pubDate}/>
 			))}
         </ul>
