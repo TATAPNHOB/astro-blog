@@ -84,20 +84,40 @@ html {
   /* nav styles */
 
   .hamburger {
-    margin: 10px 0;
-    margin-left: 1.125rem;
     display: block;
     position: relative;
     cursor: pointer;
     z-index: 10;
+    height: 60px;
+    width: 100%;
+    margin-left: 1rem;
+  }
+
+  .hamburger svg {
+    height: 100%;
+    aspect-ratio: 1;
   }
 
   .hamburger .line {
-    display: block;
-    width: 40px;
-    height: 5px;
-    margin-bottom: 8px;
-    background-color: var(--secondary);
+    stroke: var(--bg-primary);
+    stroke-width: 6;
+    transition: .2s ease;
+  }
+
+  .hamburger-expanded svg .line-top {
+    transform-origin: 10px 15px;
+    transform: rotate(45deg); 
+  }
+
+  .hamburger-expanded svg .line-middle {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+
+  .hamburger-expanded svg .line-bottom {
+    transform-origin: 10px 45px;
+    transform: rotate(-45deg); 
   }
 
   nav {
