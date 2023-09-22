@@ -20,3 +20,7 @@ Today cometh with some minor changes, mostly concerning the readability and mobi
 - Blog page is being sorted by latest now. It will be probably reworked into a table, but still, it's a chunk of progress. 
 
 Good going. I also added a 'projects' page yesterday, but didn't really add anything in it. Well, no biggie, it's gonna be filled out soon enough.
+
+UPD: Now a hamburger icon has even better animation! Figured out a good way just before going to sleep.  
+
+-DT

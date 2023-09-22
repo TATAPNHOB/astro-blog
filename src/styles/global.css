@@ -101,23 +101,27 @@ html {
   .hamburger .line {
     stroke: var(--bg-primary);
     stroke-width: 6;
-    transition: .2s ease;
+    transition: .2s;
+    transform-origin: center;
   }
 
   .hamburger-expanded svg .line-top {
-    transform-origin: 10px 15px;
-    transform: rotate(45deg); 
+    transform: translateY(15px);
+    opacity: 0; 
   }
 
-  .hamburger-expanded svg .line-middle {
-    opacity: 0;
-    transform: translateY(10px);
+  .hamburger-expanded svg .line-middle1 {
+    transform: rotate(45deg);
+  }
+
+  .hamburger-expanded svg .line-middle2 {
+    transform: rotate(-45deg);
   }
 
 
   .hamburger-expanded svg .line-bottom {
-    transform-origin: 10px 45px;
-    transform: rotate(-45deg); 
+    transform: translateY(-15px);
+    opacity: 0;
   }
 
   nav {
