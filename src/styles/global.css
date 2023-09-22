@@ -163,9 +163,12 @@ html {
   }
 
   article img {
-    width: 100%;
+    width: calc(100% - 2.5rem);
   }
 
+  article p {
+    text-indent: 1em;
+  }
   ul {
     list-style-type: '> ';
   }

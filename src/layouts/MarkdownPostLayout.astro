@@ -14,7 +14,7 @@ const { frontmatter } = Astro.props;
             <p>Published on: <time datetime={frontmatter.pubDate}>{frontmatter.pubDate.slice(0,10)}</time></p>
             <p><em>{frontmatter.description}</em></p>
         </div> 
-        <img class='blog-image' src={frontmatter.image.url} alt={frontmatter.image.alt}>    
+        <img class='blog-image' src={frontmatter.image.url} alt={frontmatter.image.alt} />    
     </section>
     <div class="divider"></div>
     <article>
