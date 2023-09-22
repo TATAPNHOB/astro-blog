@@ -333,8 +333,16 @@ html {
   .blog-block-container p {
     text-align: center;
   }
+
+  .blog-block-container p span {
+    color: black;
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
   
   .blog-block-container p a {
+    display: inline-block;
+    width: fit-content;
     font-size: 1.125rem;
     background-color: black;
     color: #EEBC1D;

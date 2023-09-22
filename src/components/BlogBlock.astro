@@ -28,6 +28,6 @@ const { postTitle, postUrl, postDate } = Astro.props;
       <h2>CHECK OUT THE LATEST BLOG POST!</h2>
     </div>
     <div class='blog-block-divider'></div>
-    <p><a href={postUrl}>{`${postTitle} --- ${postDate.slice(0, 10)}`}</a></p>
+    <p><span>{`${postDate.slice(0, 10)}>>`}</span><a href={postUrl}>{postTitle}</a></p>
   </div>
 
