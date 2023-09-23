@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'GM Era, Day 2'
-pubDate: 2023-09-23
+pubDate: 2023-09-23T00:30
 description: 'Responsiveness is your responsibility.'
 author:
     name: 'tatapnhob'

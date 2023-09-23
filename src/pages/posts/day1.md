@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'GM Era, Day 1'
-pubDate: 2023-09-22
+pubDate: 2023-09-22T00:30
 description: 'Mostly small things.'
 author:
     name: 'tatapnhob'

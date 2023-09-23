@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Hello, world.'
-pubDate: 2023-09-21
+pubDate: 2023-09-21T00:30
 description: 'This is the start of something.'
 author:
     name: 'tatapnhob'
