@@ -2,7 +2,7 @@
   --bg-primary: #EEBC1D;
   --bg-secondary: #000;
   --primary: white;
-  --secondary: gold;
+  --secondary: #EEBC1D;
 }
 
 html {
@@ -99,7 +99,7 @@ html {
     z-index: 10;
     height: 60px;
     width: 100%;
-    margin-left: 1rem;
+    padding-left: 1rem;
   }
 
   .hamburger svg {
@@ -150,8 +150,8 @@ html {
 
   .nav-links a {
     display: block;
-    text-align: center;
-    padding: 10px 0;
+    text-align: left;
+    padding: 10px calc(1rem + 10px);
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
@@ -168,7 +168,7 @@ html {
     display: block;
     content: '';
     position: absolute;
-    width: 5px;
+    width: 4px;
     height: 100%;
     top: 0;
     left: 0;
@@ -214,8 +214,9 @@ html {
     padding: 0.2rem 0.5rem;
     background-color: var(--bg-primary);
     color: black;
-    box-shadow: 3px 3px 0 orangered;
+    /* box-shadow: 3px 3px 0 var(--bg-primary); */
     margin-bottom: 0.5rem;
+    border-radius: 5px;
   }
 
   .author {
@@ -386,11 +387,11 @@ html {
   .blog-block-container {
     background-color: #EEBC1D;
     padding: 1.5rem 2rem;
-    max-width: 450px;
+    max-width: 400px;
     border-radius: 1rem;
     margin: 0 auto;
   }
-  
+
   .blog-block-header {
     display: flex;
     align-items: center;
@@ -404,7 +405,7 @@ html {
   }
   
   .blog-block-icon {
-    min-width: 4rem;
+    min-width: 3.5rem;
   }
   
   .blog-block-divider {
@@ -453,7 +454,7 @@ html {
 
     .nav-links .highlighted:before {
       width: 100%;
-      height: 5px;
+      height: 4px;
     }
 
     .hamburger {
