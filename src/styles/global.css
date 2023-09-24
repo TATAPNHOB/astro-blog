@@ -83,11 +83,14 @@ html {
     margin-top: 0;
     margin-bottom: 0.4rem;
     z-index: 2;
+    color: #EEBC1D;
+    mix-blend-mode: difference;
   }
 
   .social-container {
     position: relative;
     z-index: 2;
+    mix-blend-mode: difference;
   }
 
   /* nav styles */
