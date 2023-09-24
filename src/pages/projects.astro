@@ -1,10 +1,13 @@
 ---
 import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectsSection from '../components/ProjectsSection.astro';
 
 const pageTitle = 'My Projects';
 const pageName = 'projects';
 
 ---
 
-<BaseLayout pageTitle={pageTitle} pageName={pageName} />
+<BaseLayout pageTitle={pageTitle} pageName={pageName}>
+    <!-- <ProjectsSection /> -->
+</BaseLayout>

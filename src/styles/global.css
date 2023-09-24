@@ -1,6 +1,6 @@
 :root {
   --bg-primary: #EEBC1D;
-  --bg-secondary: #122;
+  --bg-secondary: #000;
   --primary: white;
   --secondary: gold;
 }
@@ -24,13 +24,17 @@ html {
     overflow-x: hidden;
   }
 
+  /* a[target="_blank"]::after {
+    background-image: url("data:image/svg+xml;utf8l<svg ");
+  } */
+
   .background {
     width: 100vw;
     height: 100%;
     top: 0; left: 0;
     position: fixed;
     background-image: radial-gradient(
-      rgba(255, 255, 255, 0.1) 9%,
+      rgba(255, 255, 255, 0.15) 9%,
       transparent 9%
     );
     background-position: 0% 0%;
@@ -47,7 +51,7 @@ html {
     background-color: var(--bg-primary);
     padding: 0.5rem 0;
     margin:  0 0 1rem 0;
-    font-size: 2rem;
+    font-size: 1.75rem;
     text-align: center;
     font-weight: 700;
   }
@@ -55,6 +59,7 @@ html {
   h2 {
     text-align: center;
     color: var(--secondary);
+    font-size: 1.3rem;
   }
 
   footer {
@@ -148,10 +153,10 @@ html {
     text-align: center;
     padding: 10px 0;
     text-decoration: none;
-    font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
     transition: background-color .2s, color .2s;
+    position: relative;
   }
 
   .nav-links a:hover, .nav-links a:focus {
@@ -159,9 +164,15 @@ html {
     color: black;
   }
 
-  .nav-links .highlighted {
+  .nav-links .highlighted:before {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    top: 0;
+    left: 0;
     background-color: var(--bg-primary);
-    color: black;
   }
 
   .expanded {
@@ -205,6 +216,10 @@ html {
     color: black;
     box-shadow: 3px 3px 0 orangered;
     margin-bottom: 0.5rem;
+  }
+
+  .author {
+    margin-bottom: 0;
   }
 
   .tags li a, .index-blog-snippet li a {
@@ -251,7 +266,6 @@ html {
   .divider {
     border-bottom: 2px solid var(--bg-primary);
     width: 10rem;
-    height: 2rem;
     margin-bottom: 2rem;
   }
 
@@ -296,7 +310,7 @@ html {
 
   .arrow-container {
     height: inherit;
-    width: 60px;
+    width: 44px;
     aspect-ratio: 1;
     display: none;
     overflow: hidden;
@@ -304,20 +318,20 @@ html {
 
   #evo-arrows {
     height: 100%;
-    position: relative;
-    left: -105px;
+    position: absolute;
+    right: 0;
   }
 
   .arrow-container:hover #evo-arrows {
-    animation: arrow-slide-right .2s linear infinite;
+    animation: arrow-slide-right .4s linear infinite;
   }
 
   @keyframes arrow-slide-right {
     0% {
-      left: -105px;
+      right: 0;
     }
     100% {
-      left: -75px;
+      right: -100%;
     }
   }
 
@@ -332,11 +346,21 @@ html {
   }
 
   #evo-wip .st0 {
-    fill: orangered;
+    fill: black;
     /* filter: drop-shadow(0 0 1px orangered); */
   }
-  #evo-wip .st1{fill:none;stroke: orangered;stroke-width:7;stroke-miterlimit:10;}
-	#evo-wip .st2{fill:none;stroke: orangered;stroke-width:9;stroke-miterlimit:10;}
+
+  #evo-wip .st1, #evo-wip .st2 {
+    fill:none;stroke: black;stroke-width:7;stroke-miterlimit:10;
+  }
+
+	#evo-wip .st1 {
+    stroke-width: 7;
+  }
+
+	#evo-wip .st2 {
+    stroke-width: 10;
+  }
 
   .left-cog {
     transform-origin: 112px 102px;
@@ -420,10 +444,16 @@ html {
       background: none;
       height: 100%;
     }
+
     .nav-links a {
       display: inline-block;
-      padding: 15px 20px;
+      padding: 10px 20px;
       height: 100%;
+    }
+
+    .nav-links .highlighted:before {
+      width: 100%;
+      height: 5px;
     }
 
     .hamburger {
@@ -432,6 +462,7 @@ html {
 
     .arrow-container {
       display: block;
+      position: relative;
     }
 
     .title-section {

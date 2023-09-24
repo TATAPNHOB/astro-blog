@@ -1,0 +1,9 @@
+---
+import { projects } from '../constants/projects'
+import ProjectCard from './ProjectCard.astro';
+
+---
+
+{projects.map((project) => (
+    <ProjectCard name={project.name} title={project.title} description={project.description} img={project.img} link={project.link} cta={project.cta} />
+))}
