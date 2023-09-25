@@ -20,7 +20,7 @@ I spent a whale of my time off during those two days surfing the 'net in the mos
 
 This website is far from being modern and peak design, of course. In fact, it never was supposed to be; I chose a monospace font and flat-colored boxes and containers for a reason. This is a first step in a big **Journey to the Web** and I will be wise to remember it. Moreover, it was made without a coherent design in mind, wasn't painstakingly created as a mockup in Illustrator or Figma and is generally a product of the *mind flow*. And I am fine with that.
 
-Anyway. I also mapped out the [Projects page](../projects) today. This is ought to be a doozy. 
+Anyway. I also mapped out the [Projects page](../../projects) today. This is ought to be a doozy. 
 
 That would be all about my web affairs. I am really happy that I didn't burn out yet. Here's to the eternal feeling of webdev empowerment!
 
