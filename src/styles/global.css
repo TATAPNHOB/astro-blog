@@ -34,11 +34,11 @@ html {
     top: 0; left: 0;
     position: fixed;
     background-image: radial-gradient(
-      rgba(255, 255, 255, 0.15) 9%,
-      transparent 9%
+      rgba(255, 255, 255, 0.15) 10%,
+      transparent 10%
     );
     background-position: 0% 0%;
-    background-size: 8vmin 8vmin;
+    background-size: 12px 12px;
     z-index: -1;
   }
   
