@@ -85,6 +85,10 @@ html {
     z-index: 2;
     color: #EEBC1D;
     mix-blend-mode: difference;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
   }
 
   .social-container {
