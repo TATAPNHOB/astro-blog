@@ -6,7 +6,6 @@
 }
 
 html {
-    background-color: var(--bg-secondary);
     font-family: 'Noto Sans Mono', monospace;
     color: var(--primary);
   }
@@ -29,6 +28,15 @@ html {
   } */
 
   .background {
+    width: 100vw;
+    height: 100%;
+    top: 0; left: 0;
+    position: fixed;
+    background-image: linear-gradient(#121212, #000);
+    z-index: -1;
+  }
+  
+  .dots {
     width: 100vw;
     height: 100%;
     top: 0; left: 0;
