@@ -1,6 +1,13 @@
 ---
 
-const { url, title, date } = Astro.props;
+let { url, title, date, tags } = Astro.props;
+
+if (tags === undefined) tags = [];
 ---
 
-<li class="blog-item"><a href={url}>{`${title} --- ${date.slice(0, 10)}`}</a></li>
+<li class="blog-item">
+    <a href={url}>{title}</a>
+    {tags.map((tag) => (
+        <a class="blog-item-tag" href={`../../tags/${tag}`}>{`>>${tag}`}</a>
+    ))}
+</li>

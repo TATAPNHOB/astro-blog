@@ -451,6 +451,15 @@ html {
     border-radius: 0.5rem;
   }
 
+  .blog-item-tag {
+    background-color: var(--bg-primary);
+    color: var(--bg-secondary);
+    border-radius: 100vh;
+    font-size: 0.8rem;
+    padding: 0 1ch;
+    margin: 0 2px;
+  }
+
 
   @media screen and (min-width: 636px) {
     .nav-links {

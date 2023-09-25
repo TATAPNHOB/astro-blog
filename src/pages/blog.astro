@@ -15,7 +15,7 @@ console.log(typeof allPosts[0].frontmatter.pubDate);
 <BaseLayout pageTitle={pageTitle} pageName={pageName}>
         <ul>
             {sortedPosts.map((post) => (
-				<BlogItem url={post.url} title={post.frontmatter.title} date={post.frontmatter.pubDate}/>
+				<BlogItem url={post.url} title={post.frontmatter.title} date={post.frontmatter.pubDate} tags={post.frontmatter.tags}/>
 			))}
         </ul>
 </BaseLayout>
