@@ -46,7 +46,7 @@ html {
     top: 0; left: 0;
     position: fixed;
     background-image: radial-gradient(
-      rgba(255, 255, 255, 0.3) 10%,
+      rgba(255, 255, 255, 0.22) 10%,
       transparent 10%
     );
     background-position: 0% 0%;
