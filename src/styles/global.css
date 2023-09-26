@@ -369,18 +369,24 @@ html {
     width: 300px;
     margin: 0 auto 2rem auto;
     position: absolute;
-    top: -20px;
+    bottom: -100px;
     right: -10px;
     z-index: 1;
   }
 
   #evo-wip .st0 {
-    fill: var(--bg-primary);
+    fill: var(--bg-secondary);
+    stroke: var(--bg-primary);
+    stroke-width: 2;
+    mix-blend-mode: difference;
     /* filter: drop-shadow(0 0 1px orangered); */
   }
 
-  #evo-wip .st1, #evo-wip .st2 {
-    fill:none;stroke: var(--bg-primary);stroke-width:7;stroke-miterlimit:10;
+  /* #evo-wip .st1, #evo-wip .st2 {
+    fill:none;
+    stroke: var(--bg-primary);
+    stroke-width:7;
+    stroke-miterlimit:10;
   }
 
 	#evo-wip .st1 {
@@ -389,16 +395,16 @@ html {
 
 	#evo-wip .st2 {
     stroke-width: 10;
-  }
+  } */
 
   .left-cog {
     transform-origin: 112px 102px;
-    animation: cog-rotation 5s linear infinite;
+    animation: cog-rotation 7s linear infinite;
   }
 
   .right-cog {
     transform-origin: 239px 118px;
-    animation: cog-rotation 5s linear infinite reverse;
+    animation: cog-rotation 7s linear infinite reverse;
   }
 
   @keyframes cog-rotation {
