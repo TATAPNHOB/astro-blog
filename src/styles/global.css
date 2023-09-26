@@ -9,6 +9,10 @@ html {
     font-family: 'Noto Sans Mono', monospace;
     color: var(--primary);
   }
+/* 
+  *::selection {
+    background-color: hsla(0, 100%, 100%, 0.2);
+  } */
   
   body {
     margin: 0 auto;
@@ -176,15 +180,14 @@ html {
 
   @keyframes nav-fling {
     0% {
-      padding: 10px 50px;
+      margin: 0 20px;
     }
     100% {
-      padding: 10px 20px;
+      margin: 0;
     }
   }
 
   .nav-links a:not(.highlighted):hover, .nav-links a:not(.highlighted):focus {
-    transform: translateY(-2px);
     text-shadow: 0 0 5px var(--bg-primary);
     color: white;
   }
@@ -313,6 +316,7 @@ html {
   .blog-image {
     width: 100%;
     object-fit: contain;
+    box-shadow: 0 0 20px black;
   }
 
   .author a {
@@ -505,15 +509,15 @@ html {
 
     .nav-links a {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 10px 15px;
       height: 100%;
       animation: nav-fling .3s ease;
     }
 
     .nav-links .highlighted:before {
-      width: calc(100% - 40px);
+      width: calc(100% - 30px);
       height: 2px;
-      left: 20px;
+      left: 15px;
     }
 
     .hamburger {
