@@ -60,18 +60,24 @@ html {
   
   h1 {
     color: var(--bg-primary);
-    padding: 0.5rem 0;
+    padding: 0.5rem 1.25rem;
     margin:  0 0 1rem 0;
     font-size: 2.5rem;
-    text-align: center;
+    text-align: left;
     font-weight: 700;
     border-bottom: 2px var(--bg-primary) dashed;
   }
 
   h2 {
-    text-align: center;
+    text-align: left;
     color: var(--secondary);
     font-size: 1.3rem;
+  }
+
+  h2::before {
+    content: '## ';
+    color: white;
+    opacity: 0.5;
   }
 
   footer {
@@ -536,6 +542,10 @@ html {
 
     .markdown-desc {
       width: 50%;
+    }
+
+    header {
+      margin-top: 20px;
     }
 
     .blog-image {
