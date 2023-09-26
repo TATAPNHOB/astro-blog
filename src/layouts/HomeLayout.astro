@@ -1,0 +1,37 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+const { pageTitle, pageName } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta content="TTPHB>>EVO" property="og:title" />
+    <meta content="Journey to the Web." property="og:description" />
+    <meta content="https://ttphb.netlify.app/" property="og:url" />
+    <meta content="/evo-blocky.png" property="og:image" />
+    <meta content="#EEBC1D" data-react-helmet="true" name="theme-color" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="dots"></div>
+    <Header name={pageName}/>
+    <main>
+      <slot />
+    </main>
+    <div class="footer-space"></div>
+    <Footer />
+    <script>
+      import "../scripts/menu.js";
+    </script>
+  </body>
+</html>

@@ -302,6 +302,13 @@ html {
     margin: 0 auto 2rem auto;
   }
 
+  /* .home-image {
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+  } */
+
+
   .blog-image {
     width: 100%;
     object-fit: contain;

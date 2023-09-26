@@ -6,7 +6,7 @@ if (tags === undefined) tags = [];
 ---
 
 <li class="blog-item">
-    <a href={url}>{title}</a>
+    <a href={url}>{`${new Date(date).toLocaleDateString('en-GB')} | ${title}`}</a>
     {tags.map((tag) => (
         <a class="blog-item-tag" href={`../../tags/${tag}`}>{`>>${tag}`}</a>
     ))}
