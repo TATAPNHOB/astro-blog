@@ -28,12 +28,18 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
+
+const sortedPosts = posts.sort((a, b) => ( 
+        b.frontmatter.pubDate.localeCompare(a.frontmatter.pubDate)
+ ));
+
+
 ---
 
 <BaseLayout pageTitle={`>>${tag}`}>
-    <p>Posts tagged with {tag}:</p>
+    <p>Posts tagged with <span class="blog-item-tag">&#62;&#62;{tag}</span>:</p>
     <ul>
-        {posts.map((post) => (
+        {sortedPosts.map((post) => (
             <BlogItem url={post.url} title={post.frontmatter.title} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} />
         ))}
     </ul>

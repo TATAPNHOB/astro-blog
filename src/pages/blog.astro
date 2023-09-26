@@ -8,8 +8,6 @@ const sortedPosts = allPosts.sort((a, b) => (
         b.frontmatter.pubDate.localeCompare(a.frontmatter.pubDate)
  ));
 
-console.log(typeof allPosts[0].frontmatter.pubDate);
-
 ---
 
 <BaseLayout pageTitle={pageTitle} pageName={pageName}>

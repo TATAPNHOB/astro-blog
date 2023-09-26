@@ -1,7 +1,7 @@
 :root {
   --bg-primary: #EEBC1D;
   --bg-secondary: #000;
-  --primary: white;
+  --primary: rgb(254, 254, 246);
   --secondary: #EEBC1D;
 }
 
@@ -216,6 +216,10 @@ html {
   .nav-links a:not(.highlighted):hover, .nav-links a:not(.highlighted):focus {
     text-shadow: 0 0 5px var(--bg-primary);
     color: white;
+  }
+
+  .nav-links a:hover, .nav-links a:focus {
+    background-color: #EEBC1D22;
   }
 
   .nav-links .highlighted:before {
