@@ -124,7 +124,7 @@ html {
 
   .hamburger .line {
     stroke: var(--bg-primary);
-    stroke-width: 6;
+    stroke-width: 3;
     transition: transform .2s ease, opacity .2s;
     transform-origin: center;
   }
@@ -193,7 +193,7 @@ html {
     display: block;
     content: '';
     position: absolute;
-    width: 4px;
+    width: 2px;
     height: 100%;
     bottom: 0;
     left: 0;
@@ -383,7 +383,7 @@ html {
   }
 
   #evo-wip .st0 {
-    fill: var(--bg-secondary);
+    fill: none;
     stroke: var(--bg-primary);
     stroke-width: 2;
     mix-blend-mode: difference;
@@ -404,6 +404,10 @@ html {
 	#evo-wip .st2 {
     stroke-width: 10;
   } */
+
+  #evo-wip .st1, .st2 {
+    stroke: none; fill: none;
+  }
 
   .left-cog {
     transform-origin: 112px 102px;
