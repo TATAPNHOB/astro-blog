@@ -100,7 +100,8 @@ html {
   }
 
   footer {
-    padding: 20px 30px;
+    padding: 1rem 1.25rem;
+    padding-top: 1.35rem;
     color:  var(--bg-primary);
     position: absolute;
     bottom: 0;
@@ -485,7 +486,7 @@ html {
   }
   
   .blog-block-divider {
-    border-top: var(--bg-primary) 3px solid;
+    border-top: var(--bg-primary) 2px solid;
     width: 50%;
     margin: 0 auto;
     padding-bottom: 0.5rem;
