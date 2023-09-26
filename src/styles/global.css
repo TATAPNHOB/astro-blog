@@ -32,7 +32,7 @@ html {
     height: 100%;
     top: 0; left: 0;
     position: fixed;
-    background-image: linear-gradient(#121212, #000);
+    background-image: linear-gradient(#151515, #000);
     z-index: -1;
   }
   
@@ -79,6 +79,7 @@ html {
     overflow: hidden;
     z-index: 0;
     margin-top: 2rem;
+    /* border-top: 2px dashed var(--bg-primary); */
   }
 
   .footer-space {
@@ -90,7 +91,7 @@ html {
     margin-top: 0;
     margin-bottom: 0.4rem;
     z-index: 2;
-    color: #EEBC1D;
+    color: var(--bg-primary);
     mix-blend-mode: difference;
     -webkit-user-select: none;  
     -moz-user-select: none;    
@@ -479,6 +480,7 @@ html {
   }
 
   .blog-item-tag {
+    display: inline-block;
     background-color: var(--bg-primary);
     color: var(--bg-secondary);
     border-radius: 100vh;
