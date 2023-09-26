@@ -66,6 +66,25 @@ html {
     text-align: left;
     font-weight: 700;
     border-bottom: 2px var(--bg-primary) dashed;
+    animation: h1-slide-in .4s;
+  }
+
+  @keyframes h1-slide-in {
+    0% {
+      padding-left: 5rem;
+      opacity: 0;
+    }
+    25% {
+      padding-left: 5rem;
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      padding-left: 1.25rem;
+      opacity: 1;
+    }
   }
 
   h2 {
@@ -184,7 +203,7 @@ html {
     position: relative;
   }
 
-  @keyframes nav-fling {
+  @keyframes nav-slide-in {
     0% {
       margin: 0 20px;
     }
@@ -517,7 +536,7 @@ html {
       display: inline-block;
       padding: 10px 15px;
       height: 100%;
-      animation: nav-fling .3s ease;
+      animation: nav-slide-in .3s ease;
     }
 
     .nav-links .highlighted:before {
