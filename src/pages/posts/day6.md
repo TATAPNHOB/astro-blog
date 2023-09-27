@@ -29,6 +29,6 @@ Suffice to say we're in the new age now. Or... *it's just the same page in a dif
 
 ...
 
-It's The Dead 60s [reference](https://www.youtube.com/watch?v=xjJ5-oPj7Yk). You can clap now.
+It's The Dead 60s [reference](https://www.youtube.com/watch?v=xjJ5-oPj7Yk). You may clap now.
 
 -DT
