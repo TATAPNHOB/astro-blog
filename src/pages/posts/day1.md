@@ -9,7 +9,7 @@ author:
 image:
     url: '/era.png'
     alt: 'Current era: Golden Monospace'
-tags: ['updates', 'meta']
+tags: ['updates', 'meta', 'era']
 ---
 
 Nice! I survived the emotional kick-back after loading the announcement in the Telegram channel and going for a (bad) night's sleep. Despite everything, I still like what I did and the response has been warm so far.
