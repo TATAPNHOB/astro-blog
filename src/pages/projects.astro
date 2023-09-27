@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectsSection from '../components/ProjectsSection.astro';
+import Wip from '../components/Wip.astro';
 
 const pageTitle = 'My Projects';
 const pageName = 'projects';
@@ -9,5 +10,8 @@ const pageName = 'projects';
 ---
 
 <BaseLayout pageTitle={pageTitle} pageName={pageName}>
+    <Wip>
+        <p>There will be a compilation of my projects. Just you wait.</p>
+    </Wip>
     <!-- <ProjectsSection /> -->
 </BaseLayout>
