@@ -21,6 +21,7 @@ html {
     line-height: 1.75;
     min-height: 100svh;
     position: relative;
+    padding: 0 1rem;
   }
 
   html, body {
@@ -67,6 +68,7 @@ html {
     font-weight: 700;
     border-bottom: 2px var(--bg-primary) dashed;
     animation: h1-slide-in .4s;
+    line-height: 1.4;
   }
 
   @keyframes h1-slide-in {
@@ -483,6 +485,7 @@ html {
     text-align: left;
     color: var(--bg-primary);
     flex-grow: 1;
+    line-height: 1.4;
   }
   
   .blog-block-icon {
