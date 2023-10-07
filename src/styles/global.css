@@ -200,7 +200,7 @@ html {
     text-align: left;
     padding: 10px 20px;
     text-decoration: none;
-    font-weight: 200;
+    font-weight: 400;
     /* text-transform: uppercase; */
     transition: .2s;
     position: relative;
@@ -221,7 +221,7 @@ html {
   }
 
   .nav-links a:hover, .nav-links a:focus {
-    background-color: #EEBC1D22;
+    background-color: #EEBC1D33;
   }
 
   .nav-links .highlighted:before {
@@ -530,6 +530,173 @@ html {
     margin: 0 2px;
   }
 
+  /* project block */
+
+  .project-block {
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    max-width: 730px;
+    background-color: black;
+    z-index: 2;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .4s ease;
+    margin-block: 2rem;
+    }
+
+    .project-block::after {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    content: '';
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    border: 4px dashed #edbc1d;
+    border-radius: 10px;
+    inset: 0px;
+    z-index: 4;
+    }
+
+    .project-block .content {
+    position: relative;
+    padding: 50px 60px;
+    z-index: 5;
+    max-width: 70%;
+    }
+
+    .project-block .background-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    opacity: 0.3;
+    transition: .4s ease;
+    mask: linear-gradient(180deg, black, transparent);
+    }
+
+    .project-block .image-right {
+    height: 100%;
+    max-width: 50%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    mask: linear-gradient(90deg, transparent, black 20%);
+    transition: .4s ease;
+    }
+
+    /* .project-block:hover .image-right {
+    scale: 1.1;
+    } */
+
+
+    .project-block hr {
+    width: 35%;
+    margin: 0;
+    margin-top: 0.8rem;
+    color: #edbc1d;
+    border-width: 1px;
+    border-style: solid;
+    }
+
+    .project-block .title {
+    margin-block: 0.4rem;
+    font-size: 2.3rem;
+    line-height: 1;
+    text-shadow: 0 0 10px var(--bg-secondary);
+    }
+
+    .project-block .title::before {
+      content: '';
+    }
+
+    .project-block .subtitle {
+      text-transform: uppercase;
+      font-weight: 200;
+      font-style: oblique;
+      margin-top: 0.8rem;
+      margin-bottom: 0;
+      line-height: 1;
+    }
+
+    .project-block .tags {
+      padding-left: 0;
+      margin-block-start: 0;
+      margin-block-end: 0.5rem;
+    }
+
+    .project-block .tag {
+      background-color: var(--bg-secondary);
+      color: var(--bg-primary);
+      text-transform: uppercase;
+      display: inline-block;
+      font-size: 0.6rem;
+      border: 1px #edbc1d solid;
+      padding: 2px 10px;
+      border-radius: 100px;
+      margin-bottom: 0;
+    }
+
+    .project-block .description {
+    font-size: 0.8rem;
+    }
+
+    .project-block .links {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.1rem;
+    flex-wrap: wrap;
+    }
+
+    .project-block .button {
+    font-size: 0.8rem;
+    background-color: #edbc1d;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    transition: .2s ease;
+    margin-right: 0.4rem;
+    text-transform: uppercase;
+    }
+
+    .project-block .unfinished {
+      background-color: #455;
+      user-select: none;
+    }
+
+    .project-block .button:hover {
+    box-shadow: 0 0 20px #edbc1d;
+    }
+
+    .project-block .unfinished:hover {
+      box-shadow: none;
+      text-shadow: none;
+    }
+
+    .project-block .icon {
+    height: 20px;
+    aspect-ratio: 1;
+    display: block;
+    text-decoration: none;
+    }
+
+    .project-block .icon svg {
+    display: block;
+    fill: #edbc1d;
+    height: 100%;
+    margin-inline: auto;
+    }
+
 
   @media screen and (min-width: 636px) {
     .nav-links {
@@ -579,4 +746,26 @@ html {
       width: 50%;
     }
 
+  }
+
+  @media screen and (max-width: 636px) {
+    .project-block .image-right {
+      display: none;
+    }
+
+    .project-block .content {
+      max-width: none;
+    }
+
+    .project-block .title {
+      text-align: center;
+    }
+    .project-block .button {
+      text-align: center;
+      margin-inline: auto;
+    }
+
+    .project-block hr {
+      margin-inline: auto;
+    }
   }

@@ -1,12 +1,30 @@
 ---
 
-const { name, title, description, logo, cover, link, cta } = Astro.props;
+const { name, title, description, logo, cover, link, cta, subtitle, tags, front, finished } = Astro.props;
 
 ---
 
-<div class="project-card" id={name}>
-    <img src={cover} alt={`${title} cover`}>
-    <h2>{title}</h2>
-    <p>{description}</p>
-    <a href={link}>{cta}</a> <!-- hmmm -->
-</div>
+<div class='project-block'>
+  <img class='background-image' src={cover} />
+  <img class='image-right' src={front}/>
+  <div class='content'>
+    <ul class='tags'>
+      {tags !== undefined && tags.map((tag) => (
+        <li class="tag">{tag}</li>
+      ))}
+    </ul>
+    <p class='subtitle'>{subtitle}</p>
+    <h2 class='title'>{title}</h2>
+    <hr />
+    <p class='description'>{description}</p>
+    <div class='links'>
+      <a href={link} target='_blank' class={`button ${!finished && 'unfinished'}`}>{cta}</a>
+      <!-- <a href='example.com' class='icon'><svg viewBox="0 0 384 512" title="chess-knight">
+  <path d="M19 272.47l40.63 18.06a32 32 0 0 0 24.88.47l12.78-5.12a32 32 0 0 0 18.76-20.5l9.22-30.65a24 24 0 0 1 12.55-15.65L159.94 208v50.33a48 48 0 0 1-26.53 42.94l-57.22 28.65A80 80 0 0 0 32 401.48V416h319.86V224c0-106-85.92-192-191.92-192H12A12 12 0 0 0 0 44a16.9 16.9 0 0 0 1.79 7.58L16 80l-9 9a24 24 0 0 0-7 17v137.21a32 32 0 0 0 19 29.26zM52 128a20 20 0 1 1-20 20 20 20 0 0 1 20-20zm316 320H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h352a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z" />
+</svg></a>
+      <a href='example.com' class='icon'><svg viewBox="0 0 320 512" title="chess-bishop">
+  <path d="M8 287.88c0 51.64 22.14 73.83 56 84.6V416h192v-43.52c33.86-10.77 56-33 56-84.6 0-30.61-10.73-67.1-26.69-102.56L185 285.65a8 8 0 0 1-11.31 0l-11.31-11.31a8 8 0 0 1 0-11.31L270.27 155.1c-20.8-37.91-46.47-72.1-70.87-92.59C213.4 59.09 224 47.05 224 32a32 32 0 0 0-32-32h-64a32 32 0 0 0-32 32c0 15 10.6 27.09 24.6 30.51C67.81 106.8 8 214.5 8 287.88zM304 448H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z" />
+</svg></a> -->
+    </div>
+  </div>
+</img>

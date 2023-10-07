@@ -5,5 +5,16 @@ import ProjectCard from './ProjectCard.astro';
 ---
 
 {projects.map((project) => (
-    <ProjectCard name={project.name} title={project.title} description={project.description} img={project.img} link={project.link} cta={project.cta} />
+    <ProjectCard 
+    name={project.name} 
+    title={project.title} 
+    front={project.front} 
+    description={project.description} 
+    cover={project.cover} 
+    link={project.link} 
+    cta={project.cta} 
+    subtitle={project.subtitle} 
+    tags={project.tags}
+    finished={project.finished}
+    />
 ))}
