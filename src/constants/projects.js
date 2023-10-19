@@ -15,10 +15,11 @@ export const projects = [
         "name": "coldopen",
         "title": "\"COLD OPEN\"",
         "subtitle": "UNIVERSITY ASSG. TWINE QUEST",
-        "tags": ["game", "unviersity", "solo", "unfinished"],
-        "finished": false,
+        "tags": ["game", "unviersity", "solo", "beta"],
+        "finished": true,
         "description": "Escape from weird bureaucratic underground nation -- with grace or otherwise.",
-        "cta": "NOT AVAILABLE YET",
+        "cta": "BETA VERSION (HTML)",
+        "link": "https://tatapnhob.github.io/coldopen",
         "cover": "/coldopen_cover.png",
         "front": "/statue.png"
     }
